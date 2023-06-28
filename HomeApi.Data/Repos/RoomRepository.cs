@@ -60,7 +60,7 @@ namespace HomeApi.Data.Repos
         {
             var existedRoom = await _context.Rooms.Where(r => r.Id == room.Id).FirstOrDefaultAsync();
 
-            if (existedRoom != null) 
+            if (existedRoom == null) 
             {
                 Console.WriteLine(room.Id + "NO");
                 return;
